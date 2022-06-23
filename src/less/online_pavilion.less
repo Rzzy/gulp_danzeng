@@ -1,0 +1,20 @@
+.online_pavilion_wrap{
+    background: url('../image/online_pavilion_bg.jpg') left top no-repeat;
+    .product_info{
+        h3 {
+            position: relative;
+            padding: 0 0 21px;
+            &::after{
+                content: " ";
+                position: absolute;
+                bottom: 0;
+                left: calc(50% - 66px);
+                display: block;
+                width: 132px;
+                height: 1px;
+                background: #232323;
+
+            }
+        }
+    }
+}

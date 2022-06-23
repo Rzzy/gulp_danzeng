@@ -1,0 +1,56 @@
+.cur_auction_wrap{
+    position: relative;
+    img.bg{
+        width: 100%;
+    }
+    .cur_auction_content{
+        position: absolute;
+        width: 100%;
+        top: 80px;
+        left: 0;
+        .product-wrap{
+            margin-top: 55px;
+            position: relative;
+            .product-img{
+                width: percentage(.45);
+                margin: 0 auto;
+                img{
+                    width: 100%;
+                }
+            }
+            div.text{
+                position: absolute;
+                height: percentage(.64);
+                padding: 0;
+                margin: 0;
+                top: percentage(.24);
+                width: percentage(.275);  
+                line-height: 40px;
+                font-size: 20px;
+                box-sizing: border-box;
+                P{
+                    position: absolute;
+                    height: 100%;
+                    padding: 0;
+                }
+                &.left{
+                    left: 0;
+                    p{
+                        right: percentage(.04);
+                        writing-mode: vertical-rl;
+                    }
+                }
+                &.right{
+                    padding-left: percentage(.04);
+                    right: 0;
+                    p{
+                        left: percentage(.04);
+                        writing-mode: vertical-lr;
+                    }
+                    
+                }
+            }
+        }
+
+    }
+}

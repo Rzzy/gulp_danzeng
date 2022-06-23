@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    @@include('../html/meta.html')
+   <link href="css/common.css" >
+</head>
+<body>
+<div class="container">
+    @@include('../html/header.html')
+    @@include('../html/banner.html', {
+        "img": "./image/product_banner.jpg"
+    })
+    <div class="product_list_wrap">
+        <div class="pro_bread_crumb_wrap">
+            @@include('../html/bread_crumb.html')
+       </div>
+    </div>
+</div>
+</body>
+</html>

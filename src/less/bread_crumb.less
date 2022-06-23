@@ -1,0 +1,20 @@
+.bread_crumb_wrap {
+    display: block;
+    position: relative;
+    font-size: 0;
+    padding-left: 32px;
+    a{
+        display: inline-block;
+        font-size: 20px;
+        color: #1d2c40;
+        text-decoration: none;
+        border-bottom: 1px solid #b29460;
+        &::after{
+            content: " > ";
+        }
+        &:last-child::after{
+            display: none;
+            line-height: 24px;
+        }
+    }
+}
