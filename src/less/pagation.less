@@ -1,0 +1,46 @@
+.pagation_wrap{
+    font-size: 20px;
+    height: 84px;
+    span.total{
+        line-height: 84px;
+    }
+    .page_list_wrap{
+        float: right;
+        padding-top: 30px;
+        .page_num,ul{
+            display: inline-block;
+        }
+        span.btn,ul li{
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            line-height: 26px;
+            text-align: center;
+            border-radius: 15px;
+            background: #b99e6e;
+            color: #fff;
+        }
+        .page_num{
+            position: relative;
+            padding-left: 15px;
+            margin-left: 15px;
+            color: #1d2c40;
+            &::before{
+                content: " ";
+                position: absolute;
+                display: block;
+                height: 12px;
+                width: 1px;
+                background: #6d737d;
+                left: 0;
+                top: 7px;
+            }
+            span:first-child{
+                border-bottom: 1px solid #b2945f;
+            }
+            span.btn{
+                transform: rotate(-90deg);
+            }
+        }
+    }
+}

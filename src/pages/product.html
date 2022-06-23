@@ -10,10 +10,38 @@
     @@include('../html/banner.html', {
         "img": "./image/product_banner.jpg"
     })
-    <div class="product_list_wrap">
-        <div class="pro_bread_crumb_wrap">
-            @@include('../html/bread_crumb.html')
-       </div>
+    <div class="product_content_wrap">
+        <div class="product_list_wrap">
+            <div class="pro_bread_crumb_wrap">
+                @@include('../html/bread_crumb.html')
+                <div class="filter_wrap">
+                    筛选：
+                    <dl class="filter_item_wrap">
+                    <dt>默认产品排序</dt> 
+                    <dd>
+                            <span>默认产品排序</span>
+                            <span>默认产品排序1</span>
+                        </dd>
+                    </dl>
+                </div>
+        </div>
+        <ul class="product_list">
+            @@loop('../html/product_card.html', [
+                { "title": "新疆和田玉子料原石【顶级】", "img":"./image/product_list_1.jpg", "tip":"拍卖结束" },
+                { "title": "新疆和田玉子料原石【顶级】", "img":"./image/product_list_1.jpg", "tip":"拍卖结束" },
+                { "title": "新疆和田玉子料原石【顶级】", "img":"./image/product_list_1.jpg", "tip":"拍卖结束" },
+                { "title": "新疆和田玉子料原石【顶级】", "img":"./image/product_list_1.jpg", "tip":"拍卖结束" },
+                { "title": "新疆和田玉子料原石【顶级】", "img":"./image/product_list_1.jpg", "tip":"拍卖结束" },
+                { "title": "新疆和田玉子料原石【顶级】", "img":"./image/product_list_1.jpg", "tip":"拍卖结束" },
+                { "title": "新疆和田玉子料原石【顶级】", "img":"./image/product_list_1.jpg", "tip":"拍卖结束" },
+                { "title": "新疆和田玉子料原石【顶级】", "img":"./image/product_list_1.jpg", "tip":"拍卖结束" },
+                { "title": "新疆和田玉子料原石【顶级】", "img":"./image/product_list_1.jpg", "tip":"拍卖结束" },
+                { "title": "新疆和田玉子料原石【顶级】", "img":"./image/product_list_1.jpg", "tip":"拍卖结束" },
+            ])
+        </ul>
+        @@include('../html/pagation.html')
+        </div>
+        @@include('../html/footer.html')
     </div>
 </div>
 </body>
