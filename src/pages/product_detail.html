@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    @@include('../html/meta.html')
+   <link href="css/common.css" >
+</head>
+<body>
+<div class="container">
+    @@include('../html/header.html')
+    @@include('../html/banner.html', {
+        "img": "./image/product_banner.jpg"
+    })
+    <div class="product_content_wrap">
+        <div class="product_list_wrap">
+            <div class="pro_bread_crumb_wrap">
+                @@include('../html/bread_crumb.html')
+                @@include('../html/product/product_detail_nav.html')    
+            </div>
+            <div class="product_img_info clear  ">
+                <div class="product_img_list">
+                    @@include('../html/product/product_detail_img_list.html')
+                </div>
+                @@include('../html/product/product_detail_text.html')
+            </div>
+            <div class="price_description_wrap">
+                @@include('../html/product/product_price_description.html')
+            </div>
+            <ul class="product_list">
+                <h2 class="section_title">
+                    <span class="title_cn">相关产品</span>
+                    <span class="title_en">Related products</span>
+                </h2>
+                @@loop('../html/product/product_card.html', [
+                    { "title": "新疆和田玉子料原石【顶级】", "img":"./image/product_list_1.jpg", "tip":"拍卖结束" },
+                    { "title": "新疆和田玉子料原石【顶级】", "img":"./image/product_list_1.jpg", "tip":"拍卖结束" },
+                    { "title": "新疆和田玉子料原石【顶级】", "img":"./image/product_list_1.jpg", "tip":"拍卖结束" }
+                ])
+            </ul>
+        </div>
+        
+        @@include('../html/footer.html')
+    </div>
+</div>
+</body>
+</html>

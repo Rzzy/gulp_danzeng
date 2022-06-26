@@ -1,0 +1,13 @@
+<div class="text_block_wrap">
+    <h3>@@title</h3>
+    @@if (subtitle) {
+        <h4 class="subtitle">@@subtitle</h4>
+    }
+    @@if (cont) {
+        <p>@@cont</p>
+    }
+    @@if (subject === true) {
+        @@include('./subject_list.html')
+    }
+    
+</div>

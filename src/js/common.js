@@ -1,5 +1,7 @@
 const cleateSwiper = require('./modules/walking_lantern.js')
 const navigator = require('./modules/navigator.js')
+const productDetailImgList = require('./modules/product_detail_img_list.js')
+const productTabChange = require('./modules/product_tab_change.js')
 function setRem() {
     // 默认使用100px作为基准大小
     const baseSize = 100;
@@ -19,4 +21,6 @@ function setRem() {
   window.onload = function(){
     cleateSwiper()
     navigator();
+    productDetailImgList()
+    productTabChange()
   }
