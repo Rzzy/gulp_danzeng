@@ -1,29 +1,12 @@
 <ul class="product_detail_nav">
-    <li>
-        <a href="" class="active">白玉</a>
-    </li>
-    <li>
-        <a href="">青白玉</a>
-    </li>
-    <li>
-        <a href="">青玉</a>
-    </li>
-    <li>
-        <a href="">黄玉</a>
-    </li>
-    <li>
-        <a href="">糖玉</a>
-    </li>
-    <li>
-        <a href="">碧玉</a>
-    </li>
-    <li>
-        <a href="">墨玉</a>
-    </li>
-    <li>
-        <a href="">紫玉</a>
-    </li>
-    <li>
-        <a href="">蓝玉</a>
-    </li>
+    @@loop('./product_detail_nav_item.html', [
+        { "text": "白玉", "href":"", "class":"active" },
+        { "text": "青白玉", "href":"", "class":"" },
+        { "text": "黄玉", "href":"", "class":"" },
+        { "text": "糖玉", "href":"", "class":"" },
+        { "text": "碧玉", "href":"", "class":"" },
+        { "text": "墨玉", "href":"", "class":"" },
+        { "text": "紫玉", "href":"", "class":"" },
+        { "text": "蓝玉", "href":"", "class":"" },
+    ])
 </ul>

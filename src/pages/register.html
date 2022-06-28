@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    @@include('../html/meta.html')
+   <link href="css/common.css" >
+</head>
+<body>
+<div class="container login_bg">
+    @@include('../html/header.html')
+    <div class="login_content">
+        @@include('../html/banner.html', {
+            "img": "./image/login_banner.jpg"
+        })
+        @@include('../html/login_register.html', {
+            "title": "注册",
+        })
+    </div>
+    @@include('../html/footer.html')
+</div>
+</body>
+</html>

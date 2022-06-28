@@ -1,0 +1,23 @@
+<div class="login_input_content">
+    <h2>@@title</h2>
+    <div class="login_input">
+        <input type="text" placeholder="请输入您的手机">
+    </div>
+    @@if (title === "注册") {
+        <div class="login_input verification_code">
+            <input type="password" placeholder="请输入验证码">
+            <a href="javascript:void(0)">获取验证码</a>
+        </div>
+    }
+    <div class="login_input password">
+        <input type="password" placeholder="请输入密码">
+    </div>
+    @@if (title === "登录") {
+        <div class="link_wrap">
+            <a href="register.html">验证码登录</a>
+            <a href="">忘记密码？</a>
+        </div>
+    }
+    
+    <button class="submit">登 录</button>
+</div>

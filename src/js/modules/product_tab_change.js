@@ -18,8 +18,11 @@ function setTabCurrent(tabs,index){
 }
 module.exports = function (){
     const tabsWraper = document.querySelector('.price_description_content')
-    const tabs = tabsWraper.querySelectorAll('dt a')
-    const tabContents = tabsWraper.querySelectorAll('dd')
+    const tabs = tabsWraper && tabsWraper.querySelectorAll('dt a')
+    const tabContents = tabsWraper && tabsWraper.querySelectorAll('dd')
+    if(!tabsWraper || !tabs || !tabContents) {
+        return false
+    }
     for(let i= 0;i < tabs.length;i++) {
         const tab = tabs[i]
         tab.addEventListener('click', function(e){

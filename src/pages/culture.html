@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    @@include('../html/meta.html')
+   <link href="css/common.css" >
+</head>
+<body>
+<div class="container">
+    @@include('../html/header.html')
+    @@include('../html/banner.html', {
+        "img": "./image/culture_banner.jpg"
+    })
+    <div class="culture_profile_wrap">
+        <div class="content_wrap">
+            <div class="bread_crumb">
+                @@include('../html/bread_crumb.html') 
+                <ul class="nav_of_bread_crumb">
+                    @@loop('../html/product/product_detail_nav_item.html', [
+                        { "text": "名家访谈", "href":"", "class":"active" },
+                        { "text": "和田玉文化", "href":"", "class":"" },
+                        { "text": "和田玉百科", "href":"", "class":"" },
+                        { "text": "和田玉教程", "href":"", "class":"" },
+                        
+                    ])
+                </ul>
+            </div>
+            <div class="text_content">
+                <img src="./image/culture.png" alt="">
+                <div class="text_wrap">
+                    <h2 class="under_line_2">和田玉</h2>
+                    <h3 class="under_line_5">文    化    形   成    史</h3>
+                    <p>从和田玉中衍生出来文化，<br />
+                        是中华传统文化的一部分，<br />
+                        受千年儒家思想影响，<br />
+                        和田玉本身的文化也逐渐被赋予了儒学思想中的一些内容，<br />
+                        “谦谦君子，温润如玉”“君子比德如玉”<br />
+                        等与玉有关的思想<br />
+                        渐渐被人们所熟知</p>
+                </div>
+            </div>
+        </div>
+        
+        @@include('../html/footer.html')
+    </div>
+</div>
+</body>
+</html>

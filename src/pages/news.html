@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    @@include('../html/meta.html')
+   <link href="css/common.css" >
+</head>
+<body>
+<div class="container">
+    @@include('../html/header.html')
+    @@include('../html/banner.html', {
+        "img": "./image/culture_banner.jpg"
+    })
+    <div class="news_content_wrap">
+        <div class="content_wrap">
+            <div class="bread_crumb clear">
+                @@include('../html/bread_crumb.html') 
+                <ul class="nav_of_bread_crumb">
+                    @@loop('../html/product/product_detail_nav_item.html', [
+                        { "text": "名家访谈", "href":"", "class":"" },
+                        { "text": "和田玉文化", "href":"", "class":"" },
+                        { "text": "和田玉百科", "href":"", "class":"active" },
+                        { "text": "和田玉教程", "href":"", "class":"" },
+                        
+                    ])
+                </ul>
+            </div>
+            <div class="news_list_wrap">
+                @@include('../html/news_list.html')
+                @@include('../html/pagation.html')
+            </div>
+        </div>
+        
+        @@include('../html/footer.html')
+    </div>
+</div>
+</body>
+</html>
