@@ -1,9 +1,17 @@
+@maxPcWin: ~"(max-width: 1440px)";
+@minPcWin: ~"(min-width: 1440px)";
+@navMobile: ~"(max-width: 1110px)";
+@headerNavPcMin: ~"(min-width: 1110px)";
+@mobileWinMax: ~"(max-width: 640px)";
+@mobileWinMin: ~"(min-width: 640px)";
+html,.container{
+    background: url('../image/container_bg.jpg') repeat;
+    background-color: #f5f5f5;
+}
 .container{
     max-width: 1920px;
     margin: 0 auto;
     font-size:12px;
-    background: url('../image/container_bg.jpg') repeat;
-    background-color: #f5f5f5;
 }
 @font-face {
     font-family:"FZHCJW";
@@ -20,7 +28,7 @@
     height: 76px;
     font-weight: normal;
     text-align: left;
-    background: url('../image/selection_title_bg.png') 60px bottom no-repeat;
+    background: url('../image/selection_title_bg.png') center bottom no-repeat;
     &.two_word{
         background: url('../image/selection_title_bg_2_word.png') 60px bottom no-repeat;
         span.title_cn{
@@ -40,9 +48,14 @@
         }    
     }
     &.five_word{
-        background: url('../image/selection_title_bg_5_word.png') 60px bottom no-repeat;
+        height: 89px;
+        background: url('../image/selection_title_bg_5_word.png') center bottom no-repeat;
+        background-size: 100% auto;
+        @media @mobileWinMax {
+            height: 89rem;
+        }
         span.title_cn{
-            padding-left: 140px;
+            text-align: center;
         }
         span.title_en{
             left: 231px;
@@ -52,8 +65,11 @@
         display: block;
         margin: 0 auto;
         font-size: 56px;
-        padding-left: 196px;
+        text-align: center;
         font-family:"FZHCJW";
+        @media @mobileWinMax {
+            font-size: 56rem;
+        }
     }
     span.title_en{
         position: absolute;
@@ -67,6 +83,9 @@
     h3{
         font-size: 28px;
         margin: 41px 0 15px;
+        @media @mobileWinMax {
+            font-size: 23rem;
+        }
     }
     div.price{
         position: relative;
@@ -74,6 +93,10 @@
         margin-bottom: 15px;
         padding-bottom: 24px;
         display: inline-block;
+        @media @mobileWinMax {
+            font-size: 36rem;
+            padding-bottom: 19rem;
+        }
         &::after{
             content: " ";
             position: absolute;
@@ -109,6 +132,9 @@
         margin-top: -64px;
         &.more{
             background: url('../image/icon.png') -60px -60px no-repeat;
+        }
+        @media @mobileWinMax {
+            margin-right:0;
         }
     }
 }

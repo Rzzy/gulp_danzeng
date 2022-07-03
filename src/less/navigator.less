@@ -2,8 +2,16 @@
     position: relative;
     display: block;
     float: left;
-    margin-left: percentage(.16);
     width: percentage(0.45);
+    @media @maxPcWin{
+        margin-left: percentage(.03);
+    }
+    @media @minPcWin{
+        margin-left: percentage(.16);
+    }
+    @media @navMobile{
+        display: none;
+    }
     ul.navigator-list{
         display: flex;
         li{

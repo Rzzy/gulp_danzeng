@@ -15,6 +15,11 @@
             max-width: 1402px;
             margin: 75px auto 0;
             display: flex;
+            @media @mobileWinMax{
+                &.pc_view{
+                    display: none;
+                }
+            }
             .experts_content{
                 flex: 1;
                 padding: 0 17px;
@@ -50,6 +55,36 @@
                     }
                     span.tips{
                         color: #636a75;
+                    }
+                }
+            }
+        }
+        .mobile_view{
+            @media @mobileWinMin{
+                display: none;
+            }
+            @media @mobileWinMax{
+                padding-bottom: 80rem;
+                .experts_content_list{
+                    display: flex;
+                    .experts_content{
+                        flex: auto;
+                        flex-shrink: 0;
+                        padding: 0 17rem;
+                        box-sizing: border-box;
+                        text-align: left;
+                        .content{
+                            h4{
+                                font-size: 32rem;
+                                line-height: 40rem;
+                                border-bottom: 1px dashed #dacbb2;
+                                padding-bottom: 22rem;
+                            }
+                            p{
+                                font-size: 18rem;
+                                line-height: 28rem;
+                            }
+                        }
                     }
                 }
             }

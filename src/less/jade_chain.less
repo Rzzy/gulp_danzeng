@@ -3,12 +3,27 @@
     padding-top: 60px;
     background: url('../image/index_last_part_bg.jpg') left bottom no-repeat;
     background-size: 100% 100%;
+    p{
+        display: none;
+        @media @mobileWinMax{
+            display: block;
+        }
+    }
     .jade_chain_content{
         img{
             max-width: 1594px;
             width: 100%;
             display: block;
             margin: 0 auto;
+        }
+        p{
+            font-size: 18rem;
+            line-height: 20rem;
+            padding: 0 80rem 0;
+            color: #3f3f3f;
+        }
+        @media @mobileWinMax{
+            padding-top: 50rem;
         }
     }
 }

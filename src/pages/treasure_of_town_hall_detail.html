@@ -8,9 +8,35 @@
 <div class="container">
     @@include('../html/header.html')
     @@include('../html/banner.html', {
-        "img": "./image/treasure_of_town_hall_banner.jpg"
+        "img": "./image/treasure_of_town_hall_banner.jpg",
+        "mimg": ""
     })
     <div class="news_content_wrap treasure_of_town_hall_detail_wrap">
+        
+        <div class="treasure_of_town_hall_detail">
+            <div class="bread_crumb clear">
+                @@include('../html/bread_crumb.html', {
+                    "bread_crumb": [
+                        {
+                            "text":"首页",
+                        },
+                        {
+                            "text":"在线展馆",
+                        },
+                        {
+                            "text":"镇馆之宝",
+                        }
+                    ]}
+                )
+            </div>
+            <h2>红山文化玉龙</h2>
+            <h3>现藏：中国国家博物馆</h3>
+            <p>
+                曾有“中华第一龙”的称誉。玉龙墨绿色，体卷曲，平面形状如一“C”字，龙体横截面为椭圆形，直径2.3～2.9厘米。龙首较短小，吻前伸，略上噘，嘴紧闭，鼻端截平，端面近椭圆形，以对称的两个圆洞作为鼻孔。龙眼突起呈梭形，前面圆而起棱，眼尾细长上翘。颈背有一长鬣，弯曲上卷，长21厘米，占龙体三分之一以上。
+            </p>
+            <img src="./image/treasure_of_town_hall_1.jpg" alt="">
+            <p>鬣扁薄，并磨出不显著的浅凹槽，边缘打磨锐利。龙身大部光素无纹，只在额底刻以细密的方格网状纹，网格突起作规整的小菱形。值得注意的是，玉龙形象带有浓重的幻想色彩，已经显示出成熟龙形的诸多因素。玉龙以一整块玉料圆雕而成，细部还运用了浮雕、浅浮雕等手法，通体琢磨，较为光洁，这都表明了当时琢玉工艺的发展水平。</p>
+        </div>
         @@include('../html/footer.html')
     </div>
 </div>

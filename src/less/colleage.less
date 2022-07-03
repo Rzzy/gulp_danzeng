@@ -3,7 +3,57 @@
     margin-top: 112px;
     background: url('..//image/colleage_bg.jpg') left top no-repeat;
     background-size: 100% 100%;
+    @media @mobileWinMax{
+        margin-top: 80rem;
+    }
     .colleage_list_wrap{
+        .mobile_title_wrap{
+            display: none;
+            @media @mobileWinMax{
+                display: block;
+                padding: 0 18rem;
+                margin-bottom: 40rem;
+                h3, a{
+                    display: inline-block;
+                    line-height: 48rem;
+                    margin: 0;
+                }
+                h3{
+                    text-align: left;
+                    font-size: 48rem;
+                    font-weight: normal;
+                    font-family: 'FZHCJW';
+                    color: #ababab;
+                    &:first-child{
+                        margin-right: 50rem;
+                    }
+                    &.active{
+                        position: relative;
+                        color: #161616;
+                        &::after{
+                            position: absolute;
+                            content: " ";
+                            display: block;
+                            height: 5px;
+                            width: 135px;
+                            bottom: 8px;
+                            left: 0;
+                            background: url('../image/icon.png') -60px -380px no-repeat;
+                        }
+                    }
+                    span{
+                        font-family: Arial, Helvetica, sans-serif;
+                        font-size: 10rem;
+                        color: #aeaeae;
+                    }
+                }
+                a{
+                    text-decoration: none;
+                    float: right;
+                    color: #1d2c40;
+                }
+            }
+        }
         .colleage_content_wrap{
             display: flex;
             max-width: 1414px;
@@ -12,6 +62,14 @@
             .colleage_content{
                 flex: 1;
                 padding: 0 23px;
+                @media @mobileWinMax{
+                    &:last-child{
+                        display: none;
+                    }
+                    .title_has_morebutton{
+                        display: none;
+                    }
+                }
                 .colleage{
                     .content-list{
                         background: url('../image/colleage_content_bg.png') left top no-repeat;
@@ -24,8 +82,11 @@
                             &:last-child{
                                 border-bottom: 0;
                             }
-                            img{
-                                flex: 1
+                            .img_wrap{
+                                flex: 1;
+                                img{
+                                    width: 100%;
+                                }
                             }
                             .text_wrap{
                                 flex: 3;
@@ -37,15 +98,22 @@
                                     margin: 0;
                                     line-height: 42px;
                                     padding-left: 28px;
+                                    @media @mobileWinMax{
+                                        font-size: 26rem;
+                                    }
                                     &::before{
                                         top: 15px;
                                     }
                                 }
                                 .intro{
-                                    margin-top: 10px;
+                                    margin-top: 10rem;
                                     padding-left: 28px;
                                     font-size: 14px;
                                     line-height: 24px;
+                                    @media @mobileWinMax{
+                                        font-size: 18rem;
+                                        line-height: 24rem;
+                                    }
                                 }
                             }
                         }
@@ -60,6 +128,7 @@
             background: url('../image/selection_title_bg_2_word.png') 0px bottom no-repeat;
             span.title_cn{
                 padding-left: 81px;
+                text-align: left;
             }
             span.title_en{
                 left: 130px;
@@ -69,6 +138,7 @@
             background: url('../image/selection_title_bg_3_word.png') 0px bottom no-repeat;
             span.title_cn{
                 padding-left: 70px;
+                text-align: left;
             }
             span.title_en{
                 left: 180px;

@@ -8,12 +8,22 @@
 <div class="container">
     @@include('../html/header.html')
     @@include('../html/banner.html', {
-        "img": "./image/company_profile_banner.jpg"
+        "img": "./image/company_profile_banner.jpg",
+        "mimg": ""
     })
     <div class="company_profile_wrap">
         <div class="content_wrap">
             <div>
-                @@include('../html/bread_crumb.html') 
+                @@include('../html/bread_crumb.html', {
+                    "bread_crumb": [
+                        {
+                            "text":"首页",
+                        },
+                        {
+                            "text":"公司简介",
+                        }
+                    ]}
+                )
             </div>
             <div class="text_content">
                 <h2>北京丹曾和田玉文化科技有限公司</h2>

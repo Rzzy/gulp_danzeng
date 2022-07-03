@@ -1,10 +1,14 @@
 .treasure_of_town_hall_wrap{
     margin-top: 30px;
+    @media @navMobile{
+        padding: 18rem;
+    }
 }
 .treasure_of_town_hall_content{
     padding-top: 80px;
     text-align: left;
     border-bottom: 1px solid #6d737d;
+    
     img{
         display: block;
         margin: 0 auto;
@@ -19,6 +23,10 @@
         font-weight: normal;
         text-align: center;
         margin: 50px auto;
+        @media @navMobile{
+           font-size: 48rem;
+           margin: 55rem auto 30rem;
+        }
         &::after{
             left: 50%;
             margin-left: -136px;
@@ -31,6 +39,11 @@
         font-size: 20px;
         color: #2f2f2f;
         line-height: 30px;
+        @media @navMobile{
+            font-size: 24rem;
+            line-height: 36rem;
+            margin-bottom: 50rem;
+         }
     }
 }
 .treasure_of_town_hall_detail_wrap{
@@ -41,7 +54,7 @@
     border-bottom: 1px solid #6d737d;
     padding-bottom: 98px;
     max-width: 1165px;
-    margin: 0 auto;
+    margin: 0 auto 78px;
     h2, h3{
         font-family: 'FZHCJW';
         font-weight: normal;

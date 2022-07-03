@@ -7,13 +7,24 @@
 <body>
 <div class="container">
     @@include('../html/header.html')
-    @@include('../html/banner.html', {
-        "img": "./image/product_banner.jpg"
-    })
     <div class="product_content_wrap">
         <div class="product_list_wrap">
-            <div class="pro_bread_crumb_wrap">
-                @@include('../html/bread_crumb.html')
+            <div class="pro_bread_crumb_wrap mobile_hide">
+                @@include('../html/bread_crumb.html', {
+                    "bread_crumb": [
+                        {
+                            "text":"首页",
+                        },
+                        {
+                            "text":"拍卖展示",
+                        },
+                        {
+                            "text":"白玉",
+                        }
+                    ],
+                    "isSHow": false
+                    }
+                )
                 @@include('../html/product/product_detail_nav.html')    
             </div>
             <div class="product_img_info clear  ">

@@ -8,12 +8,25 @@
 <div class="container">
     @@include('../html/header.html')
     @@include('../html/banner.html', {
-        "img": "./image/treasure_of_town_hall_banner.jpg"
+        "img": "./image/treasure_of_town_hall_banner.jpg",
+        "mimg": "./image/treasure_of_town_hall_banner_m.jpg"
     })
     <div class="news_content_wrap">
         <div class="content_wrap">
             <div class="bread_crumb clear">
-                @@include('../html/bread_crumb.html') 
+                @@include('../html/bread_crumb.html', {
+                    "bread_crumb": [
+                        {
+                            "text":"首页",
+                        },
+                        {
+                            "text":"在线展馆",
+                        },
+                        {
+                            "text":"镇馆之宝",
+                        }
+                    ]}
+                )
                 <ul class="nav_of_bread_crumb">
                     @@loop('../html/product/product_detail_nav_item.html', [
                         { "text": "镇馆之宝", "href":"", "class":"" },

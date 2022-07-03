@@ -4,6 +4,9 @@
     font-size: 24px;
     .footer-content{
         display: flex;
+        @media @navMobile{
+            display: none;
+        }
         img{
             width: auto;
         }
@@ -50,12 +53,75 @@
         display: block;
         margin: 0 auto;
         margin-top: 50px;
+        @media @navMobile{
+            display: none;
+        }
     }
     .copy_right{
+        @media @navMobile{
+            display: none;
+        }
         margin-top: 45px;
         padding-bottom: 25px;
         font-size: 12px;
         text-align: center;
         color: #070707;
+    }
+    .footer_content_mobile_wrap{
+        display: none;
+        @media @navMobile{
+         display: block;   
+        }
+    
+        .footer_content_mobile{
+            display: flex;
+            .items_wrap{
+                flex: 1;
+                padding-left: 44rem;
+                color:#1d2c40;
+                img{
+                    display: block;
+                    margin: 0 auto;
+                    width: 85rem;
+                }
+                h4{
+                    position: relative;
+                    padding-left: 26px;
+                    font-family: "FZHCJW";
+                    font-size: 24rem;
+                    font-weight:normal;
+                    margin: 0;
+                    &::before{
+                        top: 5rem;
+                    }
+                }
+                div{
+                    padding-left: 26px;
+                    a{
+                        font-size: 16rem;
+                        line-height: 36rem;
+                        text-decoration: none;
+                        color:#1d2c40;
+                    }
+                }
+            }
+        }
+        .logo_copyright{
+            width: calc(100% - 108rem);
+            margin: 57rem auto 0;
+            border-top: 1px solid #787878;
+            padding-top: 57rem;
+            img{
+                display: block;
+                width: 139rem;
+                margin: 0 auto;
+            }
+            p{
+                padding: 36rem 0 98rem; 
+                text-align: center;
+                font-size: 16rem;
+                color: #070707;
+            }
+        }
     }
 }

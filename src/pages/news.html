@@ -8,12 +8,22 @@
 <div class="container">
     @@include('../html/header.html')
     @@include('../html/banner.html', {
-        "img": "./image/culture_banner.jpg"
+        "img": "./image/culture_banner.jpg",
+        "mimg": ""
     })
     <div class="news_content_wrap">
         <div class="content_wrap">
             <div class="bread_crumb clear">
-                @@include('../html/bread_crumb.html') 
+                @@include('../html/bread_crumb.html', {
+                    "bread_crumb": [
+                        {
+                            "text":"首页",
+                        },
+                        {
+                            "text":"和田玉百科",
+                        }
+                    ]}
+                )
                 <ul class="nav_of_bread_crumb">
                     @@loop('../html/product/product_detail_nav_item.html', [
                         { "text": "名家访谈", "href":"", "class":"" },

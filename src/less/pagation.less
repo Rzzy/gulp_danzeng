@@ -1,6 +1,17 @@
 .pagation_wrap{
     font-size: 20px;
     height: 84px;
+    @media @mobileWinMax{
+        padding: 0 22rem;
+        height: auto;
+        &::after{
+            content: " ";
+            clear: both;
+            display: block;
+            height: 1px;
+            border-bottom: 1px solid #6d737d;
+        }    
+    }
     span.total{
         line-height: 84px;
     }

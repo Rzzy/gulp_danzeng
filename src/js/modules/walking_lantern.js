@@ -1,5 +1,10 @@
-module.exports = function(){
-  var mySwiper = new Swiper('.swiper-container',{
+module.exports = function({
+  container,
+  pagination,
+  nextEl,
+  prevEl
+}){
+  var mySwiper = new Swiper(container,{
     on:{
       init: function(){
         swiperAnimateCache(this); //隐藏动画元素 
@@ -11,11 +16,11 @@ module.exports = function(){
       } 
     },
     pagination: {
-      el: '.swiper-pagination',
+      el: pagination,
     },
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: nextEl,
+      prevEl: prevEl,
     },
   });
 }

@@ -9,10 +9,22 @@
     max-width: 1368px;
     overflow: hidden;
     width: 100%;
+    @media @mobileWinMax{
+        margin-bottom: 38rem;   
+    }
     .pro_bread_crumb_wrap{
         padding: 45px 0;
         .bread_crumb_wrap{
             float: left;
+            @media @mobileWinMax{
+                display: none;
+            }
+        }
+        @media @mobileWinMax{
+            padding: 45rem 40rem;
+            &.mobile_hide{
+                display: none;
+            }
         }
         .filter_wrap{
             float: right;
@@ -34,6 +46,9 @@
             display: block;
             float: right;
             font-size: 0;
+            @media @mobileWinMax{
+                display: none;
+            }
             li{
                 font-size: 20px;
                 display: inline-block;
@@ -85,11 +100,18 @@
     .product_list{
         margin: 0 -3px;
         border-bottom: 1px solid #6d737d;
+        @media @mobileWinMax{
+            padding: 0 22rem;
+            border-bottom: 0;    
+        }
         .product_card_wrap{
             padding: 0 3px;
             float: left;
             width: percentage(.3333);
             margin-bottom: 45px;
+            @media @mobileWinMax{
+                width: percentage(.5);
+            }
         }
         &::after{
             content: " ";
@@ -100,11 +122,18 @@
     }
     .product_img_info{
         margin-top: 40px;
+        @media @mobileWinMax{
+            margin: 0;
+        }
         .product_img_list{
             .product_detail_img_list_wrap{
                 width: percentage(.541);
                 float: left;
                 overflow: hidden;
+                @media @mobileWinMax{
+                    width: percentage(1);
+                    float: none;
+                }
                 .swiper {
                     width: 100%;
                     height: 100%;
@@ -147,13 +176,19 @@
                     background-size: cover;
                     background-position: center;
                   }
-            
+                  
                   .mySwiper2 {
                     height: 80%;
                     width: 100%;
+                    @media @mobileWinMax{
+                        display: none;
+                    }
                   }
             
                   .mySwiper {
+                    @media @mobileWinMax{
+                        display: none;
+                    }
                     height: 20%;
                     box-sizing: border-box;
                     padding: 10px 0;
@@ -163,11 +198,9 @@
                     width: 25%;
                     height: 100%;
                   }
-            
                   .mySwiper .swiper-slide-thumb-active {
                     opacity: 1;
                   }
-            
                   .swiper-slide img {
                     display: block;
                     width: 100%;
@@ -179,10 +212,21 @@
         .product_detail_text{
             width: percentage(.4);
             float: right;
+            @media @mobileWinMax{
+                width: percentage(1);
+                float: none;
+                margin-top: 70rem;
+                padding: 0 18rem;
+                box-sizing: border-box;
+            }
             h3{
                 font-size: 36px;
                 font-weight: normal;
                 margin: 0 0 16px;
+                @media @mobileWinMax{
+                   font-size: 36rem;
+                   color: #2f2f2f;
+                }
                 &::after{
                     content: " ";
                     display: inline-block;
@@ -197,14 +241,37 @@
                     font-size: 20px;
                     &.count{
                         margin-bottom: 40px;
+                        @media @mobileWinMax{
+                            margin-bottom: 0;
+                        }
                     }
                     &:last-child{
                         color: #1d2c40;
+                        @media @mobileWinMax{
+                            float: right;
+                        }
+                    }
+                    @media @mobileWinMax{
+                        display: inline-block;
+                        font-size: 24rem;
+                        line-height: 48rem;
+                        color: #1d2c40;
+                    }
+                }
+                @media @mobileWinMax{
+                    border-bottom: 1px solid #b99e6e;
+                    &::after{
+                        content: " ";
+                        display: block;
+                        clear: both;
                     }
                 }
             }
             .other_auction{
                 margin-top: 50px;
+                @media @mobileWinMax{
+                    margin-top: 40rem;
+                }
                 h4{
                     position: relative;
                     margin: 0 0 30px;
@@ -212,6 +279,9 @@
                     font-size: 36px;
                     color: #2f2f2f;
                     font-weight: normal;
+                    @media @mobileWinMax{
+                        font-size: 36rem;
+                    }
                     &::after{
                         position: absolute;
                         content: " ";
@@ -221,34 +291,73 @@
                         background: url("../image/icon.png") -60px -178px no-repeat;
                         left: 50px;  
                         bottom: 4px;
+                        @media @mobileWinMax{
+                            left: 0;  
+                        }
                       }
                 }
                 ul.other_products{
+                    @media @mobileWinMax{
+                        border-bottom: 1px solid #b99e6e;
+                    }
                     li{
                         display: flex;
                         margin-bottom: 35px;
+                        @media @mobileWinMax{
+                            &::after{
+                                content: " ";
+                                display: block;
+                                clear: both;
+                            }
+                        }
+                        @media @mobileWinMax{
+                            display: block;
+                        }
                         img{
                             flex: 1;
+                            @media @mobileWinMax{
+                                float: left;
+                                width: 25%;
+                            }
                         }
                         .text_wrap{
                             flex: 3;
-                            padding: 0 0 0 36px;
+                            padding: 0 0 0 36rem;
+                            @media @mobileWinMax{
+                                float: right;
+                                width: 75%;
+                                box-sizing: border-box;
+                            }
                             h6{
                                 margin: 0;
                                 font-size: 20px;
                                 font-weight: normal;
                                 color: #1d2c40;
                                 line-height: 42px;
+                                @media @mobileWinMax{
+                                    font-size: 24rem;
+                                    line-height: 36rem;
+                                }
                             }
                             .price{
                                 font-size: 20px;
                                 span{
                                     font-size: 24px;
                                 }
+                                @media @mobileWinMax{
+                                    font-size: 20rem;
+                                    line-height: 36rem;
+                                    span{
+                                        font-size: 24rem;
+                                    }
+                                }
                             }
                             .last_time{
                                 margin-top: 25px;
                                 font-size: 16px;
+                                @media @mobileWinMax{
+                                    margin-top: 20rem;
+                                }
                             }
                         }
                     }
@@ -259,6 +368,13 @@
                     font-family: "FZHCJW";
                     font-size: 36px;
                     color: #2f2f2f;
+                    @media @mobileWinMax{
+                        margin: 0;
+                        padding: 35rem 0;
+                        font-size: 40rem;
+                        line-height: 1;
+                        border-bottom: 1px solid #b99e6e;
+                    }
                     &::after{
                         position: absolute;
                         content: " ";
@@ -268,6 +384,9 @@
                         background: url("../image/icon.png") -60px -200px no-repeat;
                         left: 0px;  
                         bottom: 5px;
+                        @media @mobileWinMax{
+                            bottom: 34rem;
+                        }
                       }
                 }
             }
@@ -403,6 +522,10 @@
     }
     .price_description_wrap{
         margin: 60px 0;
+        @media @mobileWinMax{
+            margin: 45rem 0;
+            padding: 0 18rem;
+        }
         .price_description{
             dt, dd{
                 padding: 0;
@@ -414,6 +537,9 @@
             dt{
                 border-bottom: 1px solid #959595;
                 padding-bottom: 12px;
+                @media @mobileWinMax{
+                    border-bottom: 0;
+                }
                 a{
                     display: inline-block;
                     font-size: 40px;
@@ -421,6 +547,12 @@
                     color: #7c7c7c;
                     text-decoration: none;
                     padding: 0 24px;
+                    @media @mobileWinMax{
+                        font-size: 40rem;
+                        &:first-child{
+                            padding-left: 0;
+                        }
+                    }
                 }
                 a.active{
                     position: relative;
@@ -434,6 +566,11 @@
                         background: url(../image/icon.png) -60px -219px no-repeat;
                         left: 0;
                         bottom: 5px;
+                        @media @mobileWinMax{
+                            width: 100%;
+                            background: url(../image/tab_bg.png) left center no-repeat;    
+                            background-size: 100%;
+                        }
                     }
                 }
             }
@@ -441,12 +578,18 @@
                 font-size: 16px;
                 line-height: 28px;
                 padding-top: 50px;
+                @media @mobileWinMax{
+                    padding-top: 45rem;
+                }
                 video{
                     max-width: 837px;
                     height: auto;
                 }
                 .text_wrap{
                     padding-left: 30px;
+                    @media @mobileWinMax{
+                        padding: 0;
+                    }
                 }
                 span.text_title{
                     position: relative;
@@ -468,6 +611,9 @@
                 }
                 .offter_wrap{
                     padding-left: 48px;
+                    @media @mobileWinMax{
+                        padding: 0;
+                    }
                     table{
                         width: 100%;
                         text-align: left;
@@ -478,11 +624,17 @@
                                 font-family: "FZHCJW";
                                 &:nth-child(1){
                                     width: 225px;
+                                    @media @mobileWinMax{
+                                        width: auto;
+                                    }
                                 }
                                 &:nth-child(2){
                                     width: 300px;
                                     text-align: right;
                                     padding-right: 200px;
+                                    @media @mobileWinMax{
+                                        padding: 0;
+                                    }
                                 }    
                             }
                             td{
@@ -490,6 +642,10 @@
                                 &:nth-child(2){
                                     text-align: right;
                                     padding-right: 200px;
+                                    @media @mobileWinMax{
+                                        padding: 0;
+                                        white-space: nowrap;
+                                    }
                                 }    
                             }
                         }
@@ -518,6 +674,10 @@
             padding: 36px 0 20px;
             text-align: center;
             font-size: 24px;
+            @media @mobileWinMax{
+                font-size: 18rem;
+                padding: 33rem 0 17rem;
+            }
             &::after{
                 position: absolute;
                 content: " ";
@@ -534,5 +694,11 @@
             padding-top: 10px;
             font-size: 16px;
         }
+    }
+}
+#product_detail_img_list_mobile{
+    display: none;
+    @media @mobileWinMax{
+        display: block;
     }
 }
