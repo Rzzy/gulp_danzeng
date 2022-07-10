@@ -31,12 +31,29 @@
             line-height: 78px;
             margin: 0 0 68px;
         }
+        @media @mobileWinMax{
+            h2, h3{
+                text-align: left;
+                font-size: 90rem;
+                line-height: 1;
+                color: #363e48;
+                margin: 40rem 0;
+            }
+            h3{
+                font-size: 42rem;
+            }
+        }
         .text_wrap{
             padding: 0 48px;
             font-size: 18px;
             color: #1d2c40;
             p{
                 line-height: 30px;
+                @media @mobileWinMax{
+                    font-size: 24rem;
+                    line-height: 48rem;
+                    color: #1d2c40;
+                }
             }
             img{
                 width: 100%;

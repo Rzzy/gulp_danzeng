@@ -55,6 +55,9 @@
     padding-bottom: 98px;
     max-width: 1165px;
     margin: 0 auto 78px;
+    @media @mobileWinMax {
+        padding: 0 50rem 17rem;
+    }
     h2, h3{
         font-family: 'FZHCJW';
         font-weight: normal;
@@ -64,16 +67,29 @@
         text-align: center;
         font-size: 114px;
         color: #363e48;
+        @media @mobileWinMax {
+            text-align: left;
+            font-size: 90rem;
+        }
     }
     h3{
         font-size: 62px;
         text-align: center;
         text-indent: 30%;
+        @media @mobileWinMax {
+            font-size: 42rem;
+            color: #363e48;
+            text-indent: 0;
+        }
     }
     p{
         font-size: 20px;
         line-height: 40px;
         color: #1d2c40;
+        @media @mobileWinMax {
+            font-size: 24rem;
+            line-height: 48rem;
+        }
     }
     img{
         width: 100%;
