@@ -7,6 +7,12 @@
     margin-bottom: 85px;
     font-family: 'FZHCJW';
     font-size: 20px;
+    @media @mobileWinMax{
+        .video_banner{
+            display: none;
+        }
+        padding: 0 20px;
+    }
     .login_input_content{
         position: absolute;
         top: 165px;
@@ -15,6 +21,13 @@
         padding-bottom: 30px;
         border-radius: 12px;
         background: #ffffff;
+        z-index: 1;
+        @media @mobileWinMax{
+            position: static;
+            margin: 0 auto;
+            width: auto;
+            max-width: 500px;
+        }
         h2{
             font-size: 72px;
             color: #000000;
